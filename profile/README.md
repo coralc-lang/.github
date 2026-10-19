@@ -16,6 +16,24 @@ The result is a language for the software closest to the hardware: operating sys
 - Predictable performance: you get what you write.
 - Generics, `comptime`, traits and `extend`, tuples, and a modern type system in a C-shaped syntax.
 
+## Install
+
+The compiler is `coralc`. One command per platform.
+
+**Linux** — needs `git`, `make`, and a C compiler (`cc`):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/coralc-lang/coralc/main/install.sh | sh
+```
+
+**Windows** (PowerShell) — needs `git` and `gcc` (w64devkit or mingw-w64); `make` is used when present:
+
+```powershell
+irm https://raw.githubusercontent.com/coralc-lang/coralc/main/install.ps1 | iex
+```
+
+Both build the compiler, install to `~/.coral/bin` + `~/.coral/lib` (`%USERPROFILE%\.coral\bin` on Windows), and add `bin` to `PATH`. **Restart the shell afterwards.** Override the location with `CORAL_HOME=...` or `--prefix`, or `-Prefix` on Windows.
+
 ## Links
 
 - **Textbook & documentation:** https://coralc-lang.github.io/coral-docs/
